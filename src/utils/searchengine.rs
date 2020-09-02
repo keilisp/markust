@@ -8,7 +8,7 @@ const FRAGMENT: &AsciiSet = &CONTROLS.add(b' ').add(b'"').add(b'<').add(b'>').ad
 pub fn construct_search_url(query: &str) -> String {
     // Implement several search engines
     let encoded_query = utf8_percent_encode(query, FRAGMENT).to_string();
-    let search_url = format!("https://google.com/search?q={}", encoded_query);
+    let search_url = format!("https://www.startpage.com/sp/search?q={}", encoded_query);
 
     search_url
 }
@@ -22,7 +22,7 @@ mod tests {
         let fake_query = "foss";
         assert_eq!(
             construct_search_url(fake_query),
-            "https://google.com/search?q=foss"
+            "https://www.startpage.com/sp/search?q=foss"
         );
     }
 
@@ -31,7 +31,7 @@ mod tests {
         let fake_query = "hello foss";
         assert_eq!(
             construct_search_url(fake_query),
-            "https://google.com/search?q=hello%20foss"
+            "https://www.startpage.com/sp/search?q=hello%20foss"
         );
     }
 }

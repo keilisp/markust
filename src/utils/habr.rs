@@ -10,7 +10,7 @@ pub fn construct_habr_url(query: &str) -> String {
         let habr_url = "https://habr.com/ru/";
         habr_url.to_string()
     } else {
-        // Assume the other match is "hb sometext" and search for such an article on habr
+        // Assume the other match is "hb sometext" and search for such an article on Habr
         construct_habr_search_url(&query[3..])
     }
 }
@@ -34,7 +34,7 @@ mod tests {
 
     #[test]
     fn test_construct_habr_search_url() {
-        let fake_query = "hb foss";
+        let fake_query = "hb rust";
         assert_eq!(
             construct_habr_search_url(fake_query),
             "https://habr.com/ru/search/?q=hb%20rust"

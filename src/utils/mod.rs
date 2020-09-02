@@ -1,6 +1,8 @@
+pub mod aliexpress;
 pub mod github;
 pub mod habr;
 pub mod reddit;
+pub mod rozetka;
 pub mod searchengine;
 pub mod typingtest;
 pub mod wikipedia;

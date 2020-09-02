@@ -46,8 +46,8 @@ mod tests {
     fn test_construct_typingtest_lang_url() {
         let fake_query = "tt en";
         assert_eq!(
-            construct_typingtest_search_url(fake_query),
-            "https://10fastfingers.com/typing-test/tt%20english"
+            construct_typingtest_lang_url(fake_query),
+            "https://10fastfingers.com/typing-test/tt%20en"
         )
     }
 }
