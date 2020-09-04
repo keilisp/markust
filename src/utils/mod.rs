@@ -4,6 +4,7 @@ pub mod habr;
 pub mod reddit;
 pub mod rozetka;
 pub mod searchengine;
+pub mod translator;
 pub mod typingtest;
 pub mod wikipedia;
 pub mod youtube;

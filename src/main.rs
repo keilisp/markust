@@ -27,6 +27,7 @@ fn search(cmd: String) -> Redirect {
         "tt" => utils::typingtest::construct_typingtest_url(&cmd),
         "ax" => utils::aliexpress::construct_aliexpress_url(&cmd),
         "rz" => utils::rozetka::construct_rozetka_url(&cmd),
+        "tr" => utils::translator::construct_translator_url(&cmd),
         _ => utils::searchengine::construct_search_url(&cmd),
     };
     Redirect::to(redirect_url)
