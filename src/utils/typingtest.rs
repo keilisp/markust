@@ -15,7 +15,7 @@ pub fn construct_typingtest_url(query: &str) -> String {
         } else if &query[3..] == "ua" {
             construct_typingtest_lang_url("ukrainian")
         } else {
-            construct_typingtest_lang_url("russian")
+            construct_typingtest_lang_url(&query[3..])
         }
     } else {
         construct_typingtest_lang_url("russian")

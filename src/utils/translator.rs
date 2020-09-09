@@ -25,7 +25,7 @@ pub fn construct_translator_langs_url(query: &str) -> String {
 
     let encoded_query = utf8_percent_encode(query, FRAGMENT).to_string();
     let translator_url = format!(
-        "https://translate.google.com/?hl=uk&sl={}&tl={}&text={}",
+        "https://translate.google.com/?hl=en&sl={}&tl={}&text={}",
         from, to, encoded_query
     );
 
@@ -34,7 +34,7 @@ pub fn construct_translator_langs_url(query: &str) -> String {
 
 pub fn construct_translator_simple_url(query: &str) -> String {
     let encoded_query = utf8_percent_encode(query, FRAGMENT).to_string();
-    let translator_url = format!("https://translate.google.com/?hl=uk&text={}", encoded_query);
+    let translator_url = format!("https://translate.google.com/?hl=en&text={}", encoded_query);
 
     translator_url
 }
@@ -48,7 +48,7 @@ mod tests {
         let fake_query = "tr";
         assert_eq!(
             construct_translator_url(fake_query),
-            "https://translate.google.com/?hl=uk"
+            "https://translate.google.com/?hl=en"
         )
     }
 
@@ -57,7 +57,7 @@ mod tests {
         let fake_query = "tr hello world";
         assert_eq!(
             construct_translator_simple_url(fake_query),
-            "https://translate.google.com/?hl=uk&text=tr%20hello%20world"
+            "https://translate.google.com/?hl=en&text=tr%20hello%20world"
         )
     }
 }
